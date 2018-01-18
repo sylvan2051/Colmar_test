@@ -7,6 +7,7 @@ width: 100%;
 font-size: 16px;
 line-height: 1.4rem;
     overflow-x: hidden;
+    font-family: Raleway, Helvetica, sans-serif;
 }
 
 body {
@@ -23,15 +24,18 @@ body {
 
 
 
-.inner {
+.inner:not(.header) {
    border: 1px solid blue;
     padding: 1px;
+    width: 100%;
+   
 }
 
 .outer:not(.header) {
 border: 1px solid red;
-    padding: 2rem 1.5rem;
-
+     padding: 2rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -88,7 +92,6 @@ vertical-align:
 
 .imgbox {
    width: 60%;
-   margin-right: 24px;
 }
 
 .imgbox img {
@@ -97,17 +100,53 @@ vertical-align:
 
 .tagline {
   position: absolute;
-    top: 0%;
-    left: %;
+    top: 30%;
+   right: 10%;
     height: 30%;
-    width: 50%;
-    margin:
+    width: 30%;
+   padding-left: 4rem;
+    box-sizing: border-box;
+    color: hsla(123, 0%, 21%, 1);
+        font-weight: 400;
+    font-family: Catamaran;
+    
 }
 
+.tagline h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 1000;
+}
+
+.tagline p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    
+}
+
+.button {
+    background-color: hsla(112, 0%, 36%, 1);
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 70%;
+    position: absolute;
+    left:4rem;
+    
+ 
+}
 
 .top.outer {
+    
     display: inline-flex;
     position: relative;
+    background-color: hsla(262, 7%, 82%, 1)
 }
 
 
