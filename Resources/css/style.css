@@ -37,17 +37,16 @@ body {
 }
 
 
-.inner:not(.header) {
-   border: 1px solid blue;
-    padding: 1px;
+.inner:not(.header):not(.footer)  {
+   /*border: 1px solid blue; test only */
     width: 100%;
     display: inline-flex;
     flex-shrink: 2;
 
 }
 
-.outer:not(.header) {
-border: 1px solid red;
+.outer:not(.header):not(.footer) {
+/*border: 1px solid red; test only*/
      padding: 2rem 1.5rem;
     width: 100%;
     box-sizing: border-box;
@@ -56,21 +55,23 @@ border: 1px solid red;
 }
 
 
-.header.outer {
+.header.outer, .footer.outer {
    background-color: white;
 
    text-align: center;
    top:0;
    left:0;
     right: 0;
-    border: 1px solid red;
+    border-bottom: 1px hsla(262, 7%, 82%, 1) solid;
     margin: 1rem 1.5rem;
-
-
 }
 
-.header.inner {
-      background-color:blue;
+.footer.outer {
+    border-top: hsla(262, 7%, 82%, 1);
+    border-bottom: none;
+}
+
+.header.inner, .footer.inner {
     width: 100%;
 
 
@@ -207,45 +208,68 @@ h1 {
     display: inline-flex;
     flex-direction: column;
     width: 40%;
+    margin-top: ;
+    position: relative;
+    padding: 0;
   
 }
+
+.midinfoboxes:after, .right:after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
+  content:""; 
+  background-color: hsla(262, 7%, 82%, 1);
+    background-image: linear-gradient(to right, hsla(0,0%,100%,1), hsla(0,0%,100%,.5));
+  position: absolute; 
+  top: 2%; 
+  left: 0%; 
+  height: 70%; 
+  width: 10px;
+    z-index: 0;
+}
+
+.right:hover {
+    
+    background-image: linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,100%,.1));
+}
+
 
 
 
 .midbox {
-   display;
     position: relative;
+    z-index: 5;
+    
    
 }
-.midbox:after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
+.midbox:not(#orientation):not(#guestspeaker):after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
   content:""; 
   background: hsla(262, 7%, 82%, 1);
+    
   position: absolute; 
   top: 0; 
   left: 5%; 
-  height: 1px; 
+  height: 2px; 
   width: 90%;
 }
 
-#orientation {
-    margin: 0rem 0 1rem 0;
-    border: none;
-}
 .midboximg {
     width:35%;
     height: auto;
     padding: 1rem;
 }
 
+#orientation .midboximg {
+    padding-top:0
+}
+
 
 
 .infoboxinfobox {
     position: absolute;
-    margin: 1.0rem;
-    top: 20%;
-    right: -10%;
+    margin: .0rem;
+    top: 0%;
+    right: -7%;
     width: 65%;
-    box-sizing: border-box;
+    height: 20%;
 }
 
 .infoboxinfobox h2 {
@@ -267,14 +291,14 @@ h1 {
 
 
 
-/*3rd box from bottom*/
+/*3rd box from bottom, class offerings*/
 .low.inner {
     display: flex;
     flex-flow: column;
     align-content: center;
 }
 
-.low.inner h1 {
+.low.inner h1, .lowest.inner h1 {
     align-self: center;
 }
 
@@ -313,12 +337,15 @@ h1 {
 }
 
 
-/*THESIS SEGMENT LOWEST*/
+/*THESIS SEGMENT, LOWEST*/
 
 .lowest.inner {
     display: flex;
     flex-direction: column;
 }
+
+
+
 
 .lowestcontent {
     display: flex;
@@ -340,10 +367,25 @@ video {
 .right {
     width: 40%;
     position: relative;
-    margin-top: -15px;
+    Margin: 0 10px;
 }
 #fisma, #nyc {
 
+}
+
+
+#copyright {
+    float: left;
+}
+#footernav {
+    float: right;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+#footernav a {
+    text-decoration: none;
+    color: grey;
 }
 
 
