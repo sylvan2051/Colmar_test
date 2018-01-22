@@ -207,15 +207,13 @@ h1 {
     display: inline-flex;
     flex-direction: column;
     width: 40%;
-    height: 820px;
   
 }
 
 
 
 .midbox {
-   display: inline;
-    margin: 0rem 0 0rem 0;
+   display;
     position: relative;
    
 }
@@ -244,7 +242,7 @@ h1 {
 .infoboxinfobox {
     position: absolute;
     margin: 1.0rem;
-    top: 0%;
+    top: 20%;
     right: -10%;
     width: 65%;
     box-sizing: border-box;
@@ -318,7 +316,7 @@ h1 {
 /*THESIS SEGMENT LOWEST*/
 
 .lowest.inner {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -342,10 +340,12 @@ video {
 .right {
     width: 40%;
     position: relative;
+    margin-top: -15px;
 }
 #fisma, #nyc {
-  width: 500px;
+
 }
+
 
 /*pre-written content*/
 
