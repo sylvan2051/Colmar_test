@@ -149,7 +149,8 @@ h1 {
     font-size: 2rem;
     line-height: 2.5rem;
     position: absolute;
-    bottom: 10%;
+    bottom: 30%;
+    left: 10%;
 
 }
 
@@ -269,13 +270,13 @@ h1 {
 
 
 /*3rd box from bottom*/
-.lowin {
+.low.inner {
     display: flex;
     flex-flow: column;
     align-content: center;
 }
 
-.lowin h1 {
+.low.inner h1 {
     align-self: center;
 }
 
@@ -314,6 +315,37 @@ h1 {
 }
 
 
+/*THESIS SEGMENT LOWEST*/
+
+.lowest.inner {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.lowestcontent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videobox {
+    width: 60%;
+}
+
+video {
+    width: 100%;
+}
+
+.videoinfo {
+    padding: 1rem;
+}
+
+.right {
+    width: 40%;
+    position: relative;
+}
+#fisma, #nyc {
+  width: 500px;
+}
 
 /*pre-written content*/
 
