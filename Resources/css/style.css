@@ -41,7 +41,6 @@ body {
    border: 1px solid blue;
     padding: 1px;
     width: 100%;
-    height: 820px;
     display: inline-flex;
     flex-shrink: 2;
 
@@ -233,11 +232,6 @@ h1 {
     margin: 0rem 0 1rem 0;
     border: none;
 }
-
-#guestspeaker {
-    background-color: 
-}
-
 .midboximg {
     width:35%;
     height: auto;
@@ -277,7 +271,8 @@ h1 {
 /*3rd box from bottom*/
 .lowin {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
+    align-content: center;
 }
 
 .lowin h1 {
@@ -287,12 +282,11 @@ h1 {
 .offerlist {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 90%;
     box-sizing: border-box;
     margin: 0 5%;
-    height: 70%;
-    align-items: center;
+    align-content: center;
     
     
 }
@@ -301,11 +295,10 @@ h1 {
     display: inline-flex;
     flex-flow: column;
     flex: 1 1 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 30%;
-    margin: 4rem 0rem;
+    margin: 1rem;
     box-sizing: border-box;
-    height: 40%;
     background-color: white;
     align-content: center;
     
@@ -313,6 +306,11 @@ h1 {
 
 .offerbox img {
     width:100%;
+}
+
+.offertext {
+    width: 90%;
+    margin: 1rem;
 }
 
 
