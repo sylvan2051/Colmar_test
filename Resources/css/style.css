@@ -3,13 +3,24 @@
 html {
 
 align-content: center;
-width: 100%;
 font-size: 16px;
 line-height: 1.4rem;
     overflow-x: hidden;
     font-family: Raleway, Helvetica, sans-serif;
 }
 
+
+
+
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+
+ a:hover {
+        color: lightblue;
+    }
 
 .top.outer, .low.outer, #guestspeaker {
 
@@ -20,7 +31,7 @@ line-height: 1.4rem;
 
 img {
     width: 100%;
-   
+
 }
 
 body {
@@ -37,22 +48,22 @@ body {
 }
 
 
-.inner:not(.header):not(.footer)  {
-   /*border: 1px solid blue; test only */
+/*
+depreciated .inner:not(.header):not(.footer)  {
+   /*border: 1px solid blue; test only
     width: 100%;
     display: inherit;
     flex-shrink: 2;
 
 }
+*/
 
 .outer:not(.header):not(.footer) {
 /*border: 1px solid red; test only*/
      padding: 2rem 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
     display: inline-flex;
     position: relative;
-  
+
 }
 
 
@@ -67,7 +78,7 @@ body {
     margin: 1rem 1.5rem;
 }
 
-.footer.outer {
+.footer {
     border-top: hsla(262, 7%, 82%, 1);
     border-bottom: none;
 }
@@ -134,9 +145,9 @@ vertical-align:
     display: flex;
     flex-basis: column;
     flex-wrap: wrap;
-    
 
-    
+
+
 
 }
 
@@ -160,20 +171,20 @@ h1 {
 }
 
 .button {
-    display: flex;
+
     background-color: hsla(112, 0%, 36%, 1);
     border: none;
     color: white;
     padding: 20px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display:inline-block;
     font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     width: 100%;
     flex-shrink: 2;
-    
+
 
 
 }
@@ -188,8 +199,8 @@ h1 {
 .bigimg {
     width: 60%;
     padding-right: 24px;
-    
-    
+
+
 }
 
 .bigimg h1 {
@@ -213,23 +224,23 @@ h1 {
     margin-top;
     position: relative;
     padding: 0;
-  
+
 }
 
 .midinfoboxes:after, .right:after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
-  content:""; 
+  content:"";
   background-color: hsla(262, 7%, 82%, 1);
     background-image: linear-gradient(to right, hsla(0,0%,100%,1), hsla(0,0%,100%,.5));
-  position: absolute; 
-  top: 2%; 
-  left: 0%; 
-  height: 70%; 
+  position: absolute;
+  top: 2%;
+  left: 0%;
+  height: 70%;
   width: 10px;
     z-index: 0;
 }
 
 .right:hover {
-    
+
     background-image: linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,100%,.1));
 }
 
@@ -240,17 +251,17 @@ h1 {
     position: relative;
     z-index: 5;
     height: 33%;
-    
-   
+
+
 }
-.midbox:not(#orientation):not(#guestspeaker):after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
-  content:""; 
+#campus:after {  /*look into this functionality, from https://stackoverflow.com/a/12801460 */
+  content:"";
   background: hsla(262, 7%, 82%, 1);
-    
-  position: absolute; 
-  top: 0; 
-  left: 5%; 
-  height: 2px; 
+
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 2px;
   width: 90%;
 }
 
@@ -276,7 +287,7 @@ h1 {
 }
 
 .infoboxinfobox h2 {
-    
+
 }
 
 .infoboxinfobox p {
@@ -286,8 +297,13 @@ h1 {
 .infoboxinfobox a {
     text-decoration: none;
     color: grey;
-    
+
 }
+ a:hover {
+        color: lightblue;
+    }
+
+
 .mobileimg {
   display: none;
 }
@@ -313,8 +329,8 @@ h1 {
     box-sizing: border-box;
     margin: 0 5%;
     align-content: center;
-    
-    
+
+
 }
 
 .offerbox {
@@ -327,7 +343,7 @@ h1 {
     box-sizing: border-box;
     background-color: white;
     align-content: center;
-    
+
 }
 
 .offerbox img {
@@ -337,9 +353,18 @@ h1 {
 .offertext {
     width: 90%;
     margin: 1rem;
+    
+}
+.offerbox a  {
+text-decoration: none;
+    color: grey;
+    
+    
 }
 
-
+.offerbox a:hover {
+    color:lightblue;
+}
 /*THESIS SEGMENT, LOWEST*/
 
 .lowest.outer {
@@ -397,7 +422,9 @@ margin: 1rem 0 1.5rem 0;
 
 
 
-/*mobile styles*/
+
+
+/*MOBILE STYLES */
 
 /*header breaks around 615*/ @media only screen and (max-width: 620px) {
 
@@ -409,20 +436,26 @@ margin: 1rem 0 1.5rem 0;
     #topnav {
         display: none;
     }
-    
+
     #mobilenav {
         display: inline-flex;
         width: 100%;
         justify-content: space-between;
-        
+
+    }
+
+
+}
+
+
+/*mobile*/ @media only screen and (max-width: 500px)
+{
+    html {
+        padding: 0;
+        margin: 0;
     }
     
-
-} 
-
-
-/*mobile*/ @media only screen and (max-width: 500px) 
-{
+   
     .outer {
         display: flex;
         flex-direction: column;
@@ -430,16 +463,21 @@ margin: 1rem 0 1.5rem 0;
         align-items: center;
         margin: 0;
         padding: 0;
-        box-sizing:content-box;
     }
-    
+    .top {
+        margin: 0;
+        padding:0;
+    }
+
     h1 {
         font-size: 11vw;
+        text-align: center;
     }
-    
+
     .imgbox {
-        width: 100%;
-    } 
+       width: 100%;
+    }
+
     .tagline p {
         font-size: 8vw;
     }
@@ -451,23 +489,174 @@ margin: 1rem 0 1.5rem 0;
         padding: 0;
         text-align: center;
     }
-    
+
     .button {
         margin: 0;
         width: 100%;
-        display: flex;
-        
     }
+
+    .bigimg {
+        display: none;
+    }
+
+    .midinfoboxes {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .midbox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background: inherit!important;
+        text-align: center;
+    }
+    .midboximg {
+        width:100%;
+        padding: 0;
+    }
+
+    .midinfoboxes:after, .right:after {
+        content:"";
+        display: none;
+    }
+    
+    .midbox:after, #campus:after {
+         content:"";
+  background: hsla(262, 7%, 82%, 1);
+
+  position: absolute;
+  top: -4px;;
+  left: 0;
+  height: 2px;
+  width: 100%;
+    }
+    
+    .infoboxinfobox {
+        position: relative;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0 0 .5rem 0;
+        margin: 0;
+        height: auto;
+        align-self: center;
+    }
+    
+    .infoboxinfobox p {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
     
 .desktopimg {
   display: none
 }
 
 .mobileimg {
-  display: block;
+  display: inline;
+    width: 100%;
 }
     
+/*Course offering section*/
+    .low.outer {
+        background-color: white; /*notworking*/
+    }
+    
+    .offerbox {
+       Margin: .5rem 0;
+        
+        background-color: hsla(262, 7%, 82%, 1);
+    }
+    .offerbox img {
+        display: none;
+    }
+    
+    .offerlist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        
+    }
+    
+    .offerbox, .offertext {
+        width: 100%;
+        color: hsla(1, 0%, 10%, .7);
+    }
+    
+    .offertext h4, .offertext p {
+        display: none;
+        
+    }
+    
+    
+    /*thesis part*/
+    
+    .lowestcontent {
+        flex-direction: column;
+    }
+    .videobox {
+        width: 100%;
+    }
+    
+    
+    #fisma img, #nyc img {
+        display: block;
+        width: 70%;
+        align-self: center;
+        margin: auto;
+    }
+    
+    .midbox a
+    {
+        text-decoration: none;
+        color:grey;
+ 
+    }
+    
+    
+    
+    #fisma a, #nyc a {
+        color: black;
+    }
+   
+     a:hover {
+        color: lightblue;
+    }
+    
+    #fisma a:hover, #nyc a:hover {
+        color: lightblue;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 }
+
+
+
+
+
+
+
+
+
+
+
 /*pre-written content*/
 
 
