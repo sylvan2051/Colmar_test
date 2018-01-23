@@ -1,0 +1,29 @@
+sizing issues:
+
+mobile:
+
+start here button locked to the left
+
+start learning section seems to have a right margin, locked left
+
+
+course offerings do not highlight blue
+
+
+
+desktop:
+
+
+course offerings should not be in light grey all the time
+
+fisma: design and prototype  comes to the edge of window around 1024
+
+ollie saxx comes to the edge of box
+
+
+
+
+on half-window, 960px; "our guest lecture" comes past edge of grey box
+
+
+need a 768 media rule that is the same as small screen rules, without removing content - shift all objects into one column, responsively size header fonts

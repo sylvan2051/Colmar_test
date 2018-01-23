@@ -63,6 +63,7 @@ depreciated .inner:not(.header):not(.footer)  {
      padding: 2rem 1.5rem;
     display: inline-flex;
     position: relative;
+    box-sizing: border-box;
 
 }
 
@@ -170,20 +171,23 @@ h1 {
 
 }
 
+form {
+  
+   margin: 1rem auto;
+}
 .button {
 
     background-color: hsla(112, 0%, 36%, 1);
     border: none;
     color: white;
-    padding: 20px 32px;
+    padding: 20px 72px;
     text-align: center;
     text-decoration: none;
-    display:inline-block;
     font-size: 20px;
-    margin: 4px 2px;
+    margin: auto;
     cursor: pointer;
-    width: 100%;
-    flex-shrink: 2;
+    align-self: center;
+    
 
 
 
@@ -192,8 +196,9 @@ h1 {
 
 
 
-.mid.inner {
+.mid.outer {
     display: inline-flex;
+    width: 100%;
 }
 
 .bigimg {
@@ -224,6 +229,7 @@ h1 {
     margin-top;
     position: relative;
     padding: 0;
+    float: right;
 
 }
 
@@ -287,16 +293,20 @@ h1 {
 }
 
 .infoboxinfobox h2 {
+    font-size: 2vw
 
 }
 
 .infoboxinfobox p {
-    width: 90%;
+    width: 85%;
+    font-size: 1.5vw;
+    line-height: 2vw;
 }
 
 .infoboxinfobox a {
     text-decoration: none;
     color: grey;
+    font-size: 1.2vw;
 
 }
  a:hover {
@@ -448,7 +458,7 @@ margin: 1rem 0 1.5rem 0;
 }
 
 
-/*mobile*/ @media only screen and (max-width: 500px)
+/*mobile*/ @media only screen and (max-width: 399px)
 {
     html {
         padding: 0;
@@ -549,7 +559,19 @@ margin: 1rem 0 1.5rem 0;
         margin: 0;
         padding: 0;
         width: 100%;
+        font-size: 4vw;
+        line-height: 5vw;
     }
+    
+    .infoboxinfobox h2 {
+        font-size: 6vw;
+    }
+    
+   .infoboxinfobox a {
+        line-height: 6vw;
+        font-size: 5vw;
+    }
+    
     
     
 .desktopimg {
@@ -646,6 +668,228 @@ margin: 1rem 0 1.5rem 0;
     
 
 }
+
+
+
+
+/*mobile*/ @media only screen and (min-width: 400px) and (max-width: 860px)
+{
+    html {
+        padding: 0;
+        margin: 0;
+    }
+    
+   
+    .outer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .top {
+        margin: 0;
+        padding:0;
+    }
+
+    h1 {
+        font-size: 11vw;
+        text-align: center;
+        align-self: center;
+    }
+
+    .imgbox {
+       width: 100%;
+    }
+
+    .tagline p {
+        font-size: 8vw;
+    }
+    .tagline {
+        display: flex;
+        width: 80%;
+        align-self: center;
+        padding: 0 0 0 0;
+        text-align: center;
+    }
+
+    .button {
+        
+        margin: 0px 0px;
+        width: 120%;
+        
+    }
+
+    .bigimg {
+        display: none;
+    }
+
+    .midinfoboxes {
+        display: flex;
+        width: 100%;
+
+    }
+
+    .midbox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background: inherit!important;
+        text-align: center;
+      
+    }
+    .midboximg {
+        width:100%;
+        padding: 1rem 0rem;
+    }
+
+    .midinfoboxes:after, .right:after {
+        content:"";
+        display: none;
+    }
+    
+    .midbox:after, #campus:after {
+         content:"";
+  background: hsla(262, 7%, 82%, 1);
+
+  position: absolute;
+  top: -4px;;
+  left: 0;
+  height: 2px;
+  width: 100%;
+
+    }
+    
+    .infoboxinfobox {
+        position: relative;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0 0 .5rem 0;
+        margin: 0;
+        height: auto;
+        align-self: center;
+    }
+    
+    
+    .infoboxinfobox p {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    
+    .infoboxinfobox h2 {
+        font-size: 6vw;
+    }
+    
+    .infoboxinfobox a {
+        line-height: 4vw;
+        font-size: 3vw;
+    }
+    
+    
+.desktopimg {
+  width: 35%;
+}
+
+
+/*Course offering section*/
+    
+
+    .low.outer {
+        background-color: white; /*notworking*/
+        display: inline-flex;
+        margin: auto;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .offerbox {
+       Margin: .5rem 0;
+        
+        background-color: hsla(262, 7%, 82%, 1);
+    }
+    .offerbox img {
+        display: none;
+    }
+    
+    .offerlist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        
+    }
+    
+    .offerbox, .offertext {
+        width: 100%;
+        color: hsla(1, 0%, 10%, .7);
+    }
+    
+   
+      .offerbox a:hover {
+        color: lightblue;
+    }
+    
+    /*thesis part*/
+    
+    .lowestcontent {
+        flex-direction: column;
+    }
+    .videobox {
+        width: 100%;
+    }
+    
+    
+    #fisma img, #nyc img {
+        display: block;
+        width: 70%;
+        align-self: center;
+        margin: auto;
+    }
+    
+    .midbox a
+    {
+        text-decoration: none;
+        color:grey;
+ 
+    }
+    
+    
+    
+    #fisma a, #nyc a {
+        color: black;
+    }
+   
+     a:hover {
+        color: lightblue;
+    }
+    
+    #fisma a:hover, #nyc a:hover {
+        color: lightblue;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+}
+
+
+
 
 
 
